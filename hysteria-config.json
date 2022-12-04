@@ -1,0 +1,13 @@
+//with obfs but without multi port
+{
+  "listen": ":1234",
+  "cert": "crt.crt",
+  "key": "key.key",
+  "obfs": "obfs",
+  "up_mbps": 100,
+  "down_mbps": 100,
+  "auth": {
+    "mode": "passwords",
+    "config": ["password1","password2"]
+  }
+}
