@@ -1,0 +1,66 @@
+//xtls tcp setting
+
+{
+  "network": "tcp",
+  "security": "xtls",
+  "xtlsSettings": {
+	  "allowInsecure": false,
+	  "minVersion": "1.2",
+	  "alpn": ["http/1.1"],
+	  "certificates": [
+	  {
+		"certificateFile": "crt.crt",
+		"keyFile": "key.key"
+	  }
+	 ]
+	}
+}
+
+//xtls kcp setting 
+{
+  "network": "kcp",
+  "security": "xtls",
+  "kcpSettings": {
+	  "downlink Capacity":30,
+	  "congestion":true,
+	  "header":{
+		  "type":"dtls"
+	  },
+	  "seed":"seed"
+  },
+  "xtlsSettings": {
+	  "allowInsecure": false,
+	  "minVersion": "1.2",
+	  "alpn": ["http/1.1"],
+	  "certificates": [
+	  {
+		"certificateFile": "crt.crt",
+		"keyFile": "key.key"
+	  }
+	 ]
+	}
+}
+
+//to use tls,simply replace "xtls" with "tls"
+
+//ws tls setting
+{
+ "network": "ws",
+ "security": "tls",
+ "wsSettings": {
+	 "acceptProxyProtocol": true,
+	 "path": "/ws_path"
+ },
+ "tlsSettings": {
+	  "allowInsecure": false,
+	  "minVersion": "1.2",
+	  "alpn": ["http/1.1"],
+	  "certificates": [
+	  {
+		"certificateFile": "crt.crt",
+		"keyFile": "key.key"
+	  }
+	 ]
+	}
+}
+
