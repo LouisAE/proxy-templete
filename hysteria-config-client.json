@@ -1,0 +1,25 @@
+{
+  "server": "1.2.3.4:1234",
+  "protocol": "udp", 
+  "up_mbps": 10, 
+  "down_mbps": 100, 
+  "retry": 3, 
+  "retry_interval": 5, 
+  "socks5": {
+    "listen": "127.0.0.1:1080", 
+    "timeout": 300 
+  },
+  "http": {
+    "listen": "127.0.0.1:80",
+    "timeout": 300 
+  },
+  "obfs": "obfs", 
+  "auth_str": "password", 
+  "server_name": "hysteria.example.com", 
+  "resolver": "114.114.114.114", //only for directly access website
+  "resolve_preference": "64",
+   "acl": "./acl/routes.acl",
+   //generate script can be found at
+   //https://github.com/LouisAE/proxy-templete/raw/main/GetRoutes.py
+  "mmdb": "./acl/Country.mmdb"
+}
