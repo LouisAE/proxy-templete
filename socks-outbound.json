@@ -1,0 +1,11 @@
+//Usually for warp
+{
+    "protocol":"socks",
+    "tag":"warp",
+        "settings":{
+            "servers":[{
+                "address":"127.0.0.1",
+                "port":2345
+            }]
+        }
+}
